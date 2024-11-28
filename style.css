@@ -218,13 +218,12 @@ label {
     text-align:center;
     font-size:32px;
     font-weight:bold;
-    position:fixed;
     background-color:white;
-    width:100%;
+
 }
 
 .tour-container {
-    margin-top:130px;
+    margin-top:140px;
     padding-bottom:50px;
 }
 
