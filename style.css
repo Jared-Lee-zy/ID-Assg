@@ -284,3 +284,54 @@ label {
     font-weight:bold;
     line-height:2;
 }
+
+
+.merch-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top:155px;
+}
+
+.merch-item {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    display: none; 
+    text-align: center;
+}
+
+
+
+.merch-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius:5px;
+    border:2px solid black;
+}
+
+.merch-item p{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.filter {
+    width:100%;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    text-align:center;
+    background-color:white;
+    position:fixed;
+}
+
+.filter input {
+    display: none;
+}
+
+.filter label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.filter-container {
+    padding-bottom:50px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Queen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img class="logo" src="queen-logo.png" alt="Queen logo">
+        </a>
+    </div>
+    <div class="navbar">
+        <a href="history.html">History</a>
+        <a href="band.html">The Band</a>
+        <a href="live.html">Live</a>
+        <a href="merch.html">Merch</a>
+    </div>
+    <div class="filter-container">
+        <div class="filter">
+            <input type="radio" id="all" name="filter" value="all" checked>
+            <label for="all">All</label>
+            <input type="radio" id="shirt" name="filter" value="shirt">
+            <label for="shirt">Shirts</label>
+            <input type="radio" id="top" name="filter" value="top">
+            <label for="top">Tops</label>
+            <input type="radio" id="collectible" name="filter" value="collectible">
+            <label for="collectible">Collectibles</label>
+            <input type="radio" id="vinyl" name="filter" value="vinyl">
+            <label for="vinyl">Vinyl</label>
+        </div>
+
+        <div class="merch-container">
+            <div class="merch-item shirt">
+                <img src="queen-1-shirt.png" alt="Queen 1 shirt">
+                <p>QUEEN 1 ALBUM ARTWORK T-SHIRT<br>$30.00</p>
+            </div>
+            <div class="merch-item shirt">
+                <img src="queen-alive-shirt.png" alt="Queen alive shirt">
+                <p>KEEP YOURSELF ALIVE T-SHIRT<br>$30.00</p>
+            </div>
+            <div class="merch-item shirt">
+                <img src="queen-logo-shirt.png" alt="Queen logo shirt">
+                <p>QUEEN 1 ORIGINAL LOGO VINTAGE T-SHIRT<br>$30.00</p>
+            </div>
+            <div class="merch-item shirt">
+                <img src="queen-2-shirt.png" alt="Queen 2 shirt">
+                <p>QUEEN 2 50TH ANNIVERSARY T-SHIRT<br>$30.00</p>
+            </div>
+            <div class="merch-item top">
+                <img src="queen-2-top.png" alt="Queen 2 top">
+                <p>QUEEN 2 50TH ANNIVERSARY SWEATSHIRT<br>$50.00</p>
+            </div>
+            <div class="merch-item top">
+                <img src="queen-alive-top.png" alt="Queen alive top">
+                <p>KEEP YOURSELF ALIVE SWEATSHIRT<br>$50.00</p>
+            </div>
+            <div class="merch-item collectible">
+                <img src="queen-guitar-umbrella.png" alt="Queen guitar umbrella">
+                <p>BRIAN MAY GUITAR UMBRELLA<br>$60.00</p>
+            </div>
+            <div class="merch-item collectible">
+                <img src="queen-mug.png" alt="Queen mug">
+                <p>GOLD CREST ON MATT FINISH MUG<br>$15.00</p>
+            </div>
+            <div class="merch-item collectible">
+                <img src="queen-skatedeck.png" alt="Queen skatedeck">
+                <p>QUEEN LIMITED EDITION SKATE DECK 'GOLD CREST'<br>$65.00</p>
+            </div>
+            <div class="merch-item vinyl">
+                <img src="queen-1-vinyl.png" alt="Queen 1 vinyl">
+                <p>QUEEN 1 VINYL<br>$28.00</p>
+            </div>
+            <div class="merch-item vinyl">
+                <img src="queen-night-vinyl.png" alt="Queen night vinyl">
+                <p>THE NIGHT COMES DOWN 7" VINYL<br>$15.00</p>
+            </div>
+            <div class="merch-item vinyl">
+                <img src="queen-outsider-vinyl.png" alt="Queen outsider vinyl">
+                <p>OUTSIDER: VINYL LP<br>$26.00</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="https://www.facebook.com/Queen/" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://x.com/queenwillrock" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/officialqueenmusic/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.youtube.com/channel/UCiMhD4jzUqG-IgPzUmmytRQ" target="_blank" class="fab fa-youtube"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterItems = (filter) => {
+                document.querySelectorAll('.merch-item').forEach(item => {
+                    item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';
+                });
+            };
+    
+            document.querySelectorAll('.filter input').forEach(radio => {
+                radio.addEventListener('change', () => filterItems(radio.value));
+            });
+    
+            filterItems('all'); 
+        });
+    </script>
+</body>
+</html>
