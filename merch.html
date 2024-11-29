@@ -19,10 +19,10 @@
         <a href="live.html">Live</a>
         <a href="merch.html">Merch</a>
     </div>
-    <div class="filter-container">
-        <div class="filter">
-            <input type="radio" id="all" name="filter" value="all" checked>
-            <label for="all">All</label>
+    <div class="filter-container">  <!--makes container for the merch section-->
+        <div class="filter">  <!--class for filter-->
+            <input type="radio" id="all" name="filter" value="all" checked>  <!--makes radio buttons with appropriate id, name and value-->
+            <label for="all">All</label>  <!--label the radio button-->
             <input type="radio" id="shirt" name="filter" value="shirt">
             <label for="shirt">Shirts</label>
             <input type="radio" id="top" name="filter" value="top">
@@ -33,12 +33,12 @@
             <label for="vinyl">Vinyl</label>
         </div>
 
-        <div class="merch-container">
-            <div class="merch-item shirt">
-                <img src="images/queen-1-shirt.png" alt="Queen 1 shirt">
-                <p>QUEEN 1 ALBUM ARTWORK T-SHIRT<br>$30.00</p>
+        <div class="merch-container">  <!--makes container for the merch to be showed-->
+            <div class="merch-item shirt">  <!--nmkes class for the shirts-->
+                <img src="images/queen-1-shirt.png" alt="Queen 1 shirt">  <!--image for the shirt and alt text-->
+                <p>QUEEN 1 ALBUM ARTWORK T-SHIRT<br>$30.00</p>  <!--name of shirt and price-->
             </div>
-            <div class="merch-item shirt">
+            <div class="merch-item shirt">  
                 <img src="images/queen-alive-shirt.png" alt="Queen alive shirt">
                 <p>KEEP YOURSELF ALIVE T-SHIRT<br>$30.00</p>
             </div>
@@ -50,17 +50,17 @@
                 <img src="images/queen-2-shirt.png" alt="Queen 2 shirt">
                 <p>QUEEN 2 50TH ANNIVERSARY T-SHIRT<br>$30.00</p>
             </div>
-            <div class="merch-item top">
-                <img src="images/queen-2-top.png" alt="Queen 2 top">
-                <p>QUEEN 2 50TH ANNIVERSARY SWEATSHIRT<br>$50.00</p>
+            <div class="merch-item top">  <!--makes class for the tops-->
+                <img src="images/queen-2-top.png" alt="Queen 2 top">  <!--image for the top and alt text-->
+                <p>QUEEN 2 50TH ANNIVERSARY SWEATSHIRT<br>$50.00</p>  <!--name of top and price-->
             </div>
             <div class="merch-item top">
                 <img src="images/queen-alive-top.png" alt="Queen alive top">
                 <p>KEEP YOURSELF ALIVE SWEATSHIRT<br>$50.00</p>
             </div>
-            <div class="merch-item collectible">
-                <img src="images/queen-guitar-umbrella.png" alt="Queen guitar umbrella">
-                <p>BRIAN MAY GUITAR UMBRELLA<br>$60.00</p>
+            <div class="merch-item collectible">  <!--makes class for collectible-->
+                <img src="images/queen-guitar-umbrella.png" alt="Queen guitar umbrella">  <!--image for the collectible and alt text-->
+                <p>BRIAN MAY GUITAR UMBRELLA<br>$60.00</p>  <!--name of collectible and price-->
             </div>
             <div class="merch-item collectible">
                 <img src="images/queen-mug.png" alt="Queen mug">
@@ -70,9 +70,9 @@
                 <img src="images/queen-skatedeck.png" alt="Queen skatedeck">
                 <p>QUEEN LIMITED EDITION SKATE DECK 'GOLD CREST'<br>$65.00</p>
             </div>
-            <div class="merch-item vinyl">
-                <img src="images/queen-1-vinyl.png" alt="Queen 1 vinyl">
-                <p>QUEEN 1 VINYL<br>$28.00</p>
+            <div class="merch-item vinyl">  <!--makes class for the vinyl-->
+                <img src="images/queen-1-vinyl.png" alt="Queen 1 vinyl">  <!--image for the vinyl and alt text-->
+                <p>QUEEN 1 VINYL<br>$28.00</p>  <!--name of vinyl and price-->
             </div>
             <div class="merch-item vinyl">
                 <img src="images/queen-night-vinyl.png" alt="Queen night vinyl">
@@ -94,8 +94,15 @@
         </div>
     </footer>
 
+<!--line 105 makes an event listener that wait for the html file to be loaded so the file runs only when the html file is loaded-->
+<!--line 106 makes a function called filterItems that takes in the filter-->
+<!--line 107 selects all the items with the merch-item class and checks them using the forEach-->
+<!--line 108 makes the display style either block or none based on if the filter is all or the merch items match the filter they will be block else they will be none-->
+<!--line 112 selects all the filter input elements and checks them using the forEach-->
+<!--line 113 makes an event listener for the radio buttons and waits for a change and calls the value of the selected radio button-->
+<!--line 116 calls the all filter to everything shows up when the page loads.-->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {   
             const filterItems = (filter) => {
                 document.querySelectorAll('.merch-item').forEach(item => {
                     item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';

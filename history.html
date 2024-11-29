@@ -19,10 +19,10 @@
                 <a href="live.html">Live</a>
                 <a href="merch.html">Merch</a>
             </div>
-        <div class="dropdown-container">
-            <label for="era">Choose an era:</label>
-            <select id="era" onchange="showParagraph(this.value)">
-                <option value="">Select an era</option>
+        <div class="dropdown-container">  <!--makes container for the dropdown-->
+            <label for="era">Choose an era:</label>  <!--labels the dropdown-->
+            <select id="era" onchange="showParagraph(this.value)">  <!--select tag to create the dropdown and calls the showParagraph function when an option is chosen-->
+                <option value="">Select an era</option>  <!--option tag to create the dropdown options with value and text-->
                 <option value="chap1">The Formation of Queen (1970-1971)</option>
                 <option value="chap2">Early Years and Breakthrough (1973-1975)</option>
                 <option value="chap3">Global Superstardom (1976-1980)</option>
@@ -33,8 +33,8 @@
                 <option value="chap8">Queen's Enduring Influence</option>
             </select>
         </div>
-            <div class="text-container">
-                <p id="chap1" class="chap-text">
+            <div class="text-container">  <!--makes container for the text to be shown from the dropdown-->
+                <p id="chap1" class="chap-text">  <!--paragraph for the text for the chapter including a hyperlink for the source and image-->
                     Queen's origins trace back to 1970 in London. Brian May and Roger Taylor were members of the band Smile with bassist Tim Staffell. 
                     When Staffell left, May and Taylor recruited Freddie Mercury, who had previously been performing under the name Farrokh Bulsara. 
                     Mercury suggested the name Queen, and the group was completed by John Deacon on bass, finalizing the iconic lineup. 
@@ -127,6 +127,12 @@
                     <a href="https://www.youtube.com/channel/UCiMhD4jzUqG-IgPzUmmytRQ" target="_blank" class="fab fa-youtube"></a>
                 </div>
             </footer> 
+
+<!--line 138 creates the function to show and hide the paragraphs based on the dropdown option-->
+<!--line 139 creates variable called paragraph and stores all the chap-text elements-->
+<!--line 140 checks over all the paragraphs with the forEach-->
+<!--line 141 sets the style of the paragraph to none to hide it-->
+<!--line 143&144 checks if the id and the value matches and will change the style to block if it does showing it-->
 
         <script>
             function showParagraph(era) {
