@@ -110,6 +110,7 @@ label {
     border:5px solid black;
     margin-top:10px;
     box-shadow: 10px 10px 8px #888888;
+    padding-bottom:40px;
 }
 
 .homepage-container {
@@ -156,11 +157,12 @@ label {
     margin: 0 10px;
     text-decoration: none;
     font-size: 1.5em;
-    transition: color 0.3s;
+    transition: all ease 0.3s;
 }
 
 .socials a:hover {
     color: grey;
+    transform:scale(1.1);
 }
 
 .noscroll {
@@ -298,6 +300,7 @@ label {
     box-sizing: border-box;
     display: none; 
     text-align: center;
+    overflow:hidden;
 }
 
 
@@ -307,6 +310,11 @@ label {
     height: auto;
     border-radius:5px;
     border:2px solid black;
+    transition: all ease 0.3s;
+}
+
+.merch-item:hover img {
+    transform: scale(1.05);
 }
 
 .merch-item p{
@@ -323,13 +331,9 @@ label {
     position:fixed;
 }
 
-.filter input {
-    display: none;
-}
 
 .filter label {
     margin-right: 10px;
-    cursor: pointer;
 }
 
 .filter-container {
